@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+
+}
+.title{
+    background-color: blueviolet;
+    margin: 0px;
+    padding: 0px;
+    color : white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+body{
+    background:#1b1b2b;
+    padding:75px;
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  h1{
+    color:#c0c0c0;
+    font-weight:100;
+  }
+  
+  .btn{
+    color:#ffffff;
+    background:rgba(0, 0, 0, 0.5);
+    padding:10px 20px;
+    font-size:12px;
+    text-decoration:none;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    
+  }
+  
+  .btn:hover{
+    border:none;
+    background:rgba(0, 0, 0, 0.4);
+    background:#fff;
+    padding:20px 20px; 
+    color:#1b1b1b;
+  }
+  
+  .footer{
+    font-size:8px;
+    color:#fff;
+    clear:both;
+    display:block;
+    letter-spacing:5px;
+    border:1px solid #fff;
+    padding:5px;
+    text-decoration:none;
+    width:210px;
+    margin:auto;
+    margin-top:400px;
+  }
+.dp{
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px; /* Optional padding */
+        background: white; /* Background for contrast */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+
+}
+.dp img {
+    display: block;
+    width: 100%; /* Make it responsive */
+    border-radius: 5px; /* Optional: to match box rounding */
+}

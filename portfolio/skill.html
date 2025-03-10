@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <title>skill</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background:#1b1b2b;
+            padding:75px;
+            text-align:center;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .skills-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .skill-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-title i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .progress-bar {
+            height: 12px;
+            width: 100%;
+            background: #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #e823f7;
+            border-radius: 6px;
+            transition: width 1.5s ease-in-out;
+        }
+        .text{
+            color:white;
+        }
+        .text1{
+            color:white;
+        }
+    
+    </style>
+</head>
+</head>
+<body>
+    <div>
+        <a href="D:\home.html" class="btn">Home</a>
+        <a href="D:\skill.html" class="btn">Skills</a>
+        <a href="D:\project.html" class="btn">Projects</a>
+        <a href="D:\contact.html" class="btn">Contact</a>
+    </div>
+    <div style="background-color: blueviolet; color:white; margin-top: 30px;" class="skills-container">
+        <h2>My Skills</h2>
+
+        <div class="skill">
+            <div class="skill-title">
+                <i class="fab fa-html5"></i> HTML
+            </div>
+            <div class="progress-bar">
+                <div class="progress" data-progress="90"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <i class="fab fa-css3-alt"></i> CSS
+            </div>
+            <div class="progress-bar">
+                <div class="progress" data-progress="80"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <i class="fab fa-js"></i> JavaScript
+            </div>
+            <div class="progress-bar">
+                <div class="progress" data-progress="70"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-title">
+                <i class="fab fa-js"></i> React JS
+            </div>
+            <div class="progress-bar">
+                <div class="progress" data-progress="40"></div>
+            </div>
+        </div><br>
+
+    </div>
+
+    <script>
+        // Animate progress bars
+        document.addEventListener("DOMContentLoaded", () => {
+            const progressBars = document.querySelectorAll(".progress");
+
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute("data-progress");
+                setTimeout(() => {
+                    bar.style.width = width + "%";
+                }, 500); // Delay for smooth animation
+            });
+        });
+    </script>
+
+    <br><br>
+    <div >
+        <h1>📌 My Skills</h1><br><br>
+        <h3 class="text"> HTML (90%)</h3>
+        <p class="text1">I have a strong command of HTML5, allowing me to create well-structured and semantic web pages. I can efficiently use tags, forms, tables, and multimedia elements to build interactive and accessible web content.</p>
+    </div><br><br>
+    <div >
+        <h3 class="text">CSS (80%)</h3>
+        <p class="text1">With expertise in CSS3, I can style and design beautiful web pages. I am proficient in using Flexbox, Grid, animations, and responsive design techniques to create visually appealing and mobile-friendly interfaces.</p>
+    </div><br><br>
+    <div >
+        <h3 class="text"> JavaScript (70%)</h3>
+        <p class="text1">I have hands-on experience with JavaScript (ES6+), DOM manipulation, event handling, and asynchronous programming. I can build interactive web applications and enhance user experience through dynamic content updates and animations.
+
+        </p>
+    </div><br><br>
+    <div> <h3 class="text">React JS (40%)</h3>
+        <p class="text1">I have a basic understanding of React.js, including components, props, and state management. I can create simple interactive user interfaces and work with JSX. I'm currently improving my skills in React Hooks, React Router, and state management libraries like Redux to build more dynamic and scalable web applications.
+
+        </p>
+    </div><br><br>
+
+</body>
+    
+</body>
+</html>
