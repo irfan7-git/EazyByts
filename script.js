@@ -175,32 +175,38 @@ function setupEventListeners() {
 
 // Load and display products
 function loadProducts(filter = 'all') {
-    const productsGrid = document.getElementById('products-grid');
-    if (!productsGrid) return;
-
     const filteredProducts = filter === 'all' ? products : products.filter(product => product.category === filter);
     
-    if (filteredProducts.length === 0) {
-        productsGrid.innerHTML = '<div class="empty-products"><i class="fas fa-shopping-bag"></i><h3>No products found</h3><p>Try selecting a different category</p></div>';
-        return;
-    }
+    // Use the advanced product loading function
+    if (window.loadProductsWithData) {
+        window.loadProductsWithData(filteredProducts);
+    } else {
+        // Fallback to basic loading if advanced features not loaded
+        const productsGrid = document.getElementById('products-grid');
+        if (!productsGrid) return;
 
-    productsGrid.innerHTML = filteredProducts.map(product => `
-        <div class="product-card fade-in" onclick="viewProduct(${product.id})">
-            <div class="product-image" style="background-image: url('${product.image}')">
-                <div class="product-badge">${product.discount}% OFF</div>
-            </div>
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p class="product-brand">${product.brand}</p>
-                <div class="product-price">
-                    <span class="current-price">₹${product.price}</span>
-                    <span class="original-price">₹${product.originalPrice}</span>
-                    <span class="discount">${product.discount}% OFF</span>
+        if (filteredProducts.length === 0) {
+            productsGrid.innerHTML = '<div class="empty-products"><i class="fas fa-shopping-bag"></i><h3>No products found</h3><p>Try selecting a different category</p></div>';
+            return;
+        }
+
+        productsGrid.innerHTML = filteredProducts.map(product => `
+            <div class="product-card fade-in" onclick="viewProduct(${product.id})">
+                <div class="product-image" style="background-image: url('${product.image}')">
+                    <div class="product-badge">${product.discount}% OFF</div>
+                </div>
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p class="product-brand">${product.brand}</p>
+                    <div class="product-price">
+                        <span class="current-price">₹${product.price}</span>
+                        <span class="original-price">₹${product.originalPrice}</span>
+                        <span class="discount">${product.discount}% OFF</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `).join('');
+    }
 }
 
 // Filter products by category

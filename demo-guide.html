@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTFITO - Feature Demo Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .demo-container {
+            max-width: 1000px;
+            margin: 150px auto 50px;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .feature-card h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .promo-codes {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .promo-code {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .keyboard-shortcuts {
+            background: #333;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .shortcut {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+        }
+        
+        .key-combo {
+            background: #555;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="announcements">
+                    <i class="fas fa-gift"></i>
+                    <span>Welcome to OUTFITO Demo - Explore all features!</span>
+                </div>
+                <div class="top-bar-links">
+                    <a href="index.html"><i class="fas fa-home"></i> Back to Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>OUTFITO</h1>
+                    <span class="logo-tagline">Feature Demo</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">← Back to Store</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="demo-container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="color: #e74c3c; margin-bottom: 1rem;">🎉 OUTFITO Advanced Features Demo</h1>
+            <p style="font-size: 1.2rem; color: #666;">Discover all the powerful features built into your e-commerce website!</p>
+        </div>
+
+        <!-- Promo Codes Section -->
+        <div class="promo-codes">
+            <h2><i class="fas fa-tag"></i> Test Promo Codes</h2>
+            <p>Try these promo codes in your cart to see the discount system in action:</p>
+            <div class="promo-grid">
+                <div class="promo-code">
+                    <strong>OUTFITO20</strong>
+                    <div>20% Off</div>
+                </div>
+                <div class="promo-code">
+                    <strong>SAVE500</strong>
+                    <div>₹500 Off</div>
+                </div>
+                <div class="promo-code">
+                    <strong>WELCOME10</strong>
+                    <div>10% Off</div>
+                </div>
+                <div class="promo-code">
+                    <strong>FREESHIP</strong>
+                    <div>Free Shipping</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3><i class="fas fa-search"></i> Smart Search System</h3>
+                <ul class="feature-list">
+                    <li>Real-time search suggestions</li>
+                    <li>Product preview in dropdown</li>
+                    <li>Popular searches display</li>
+                    <li>Search by name, brand, category</li>
+                    <li>Mobile-optimized experience</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-heart"></i> Wishlist Management</h3>
+                <ul class="feature-list">
+                    <li>Add/remove items from wishlist</li>
+                    <li>Persistent wishlist storage</li>
+                    <li>Quick add to cart from wishlist</li>
+                    <li>Visual wishlist indicators</li>
+                    <li>Empty state handling</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-sliders-h"></i> Advanced Filtering</h3>
+                <ul class="feature-list">
+                    <li>Category-based filtering</li>
+                    <li>Price range sliders</li>
+                    <li>Brand selection</li>
+                    <li>Size-based filtering</li>
+                    <li>Clear all filters option</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-sort"></i> Product Sorting</h3>
+                <ul class="feature-list">
+                    <li>Price: Low to High</li>
+                    <li>Price: High to Low</li>
+                    <li>Name: A to Z</li>
+                    <li>Discount: High to Low</li>
+                    <li>Newest First</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-eye"></i> Quick View & Actions</h3>
+                <ul class="feature-list">
+                    <li>Quick view modal</li>
+                    <li>Hover overlay buttons</li>
+                    <li>Instant add to cart</li>
+                    <li>Product rating display</li>
+                    <li>Compare products (coming soon)</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-th"></i> View Options</h3>
+                <ul class="feature-list">
+                    <li>Grid view (default)</li>
+                    <li>List view toggle</li>
+                    <li>Responsive layouts</li>
+                    <li>User preference saving</li>
+                    <li>Smooth transitions</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-images"></i> Hero Slider</h3>
+                <ul class="feature-list">
+                    <li>Auto-rotating slides</li>
+                    <li>Manual navigation</li>
+                    <li>Touch/swipe support</li>
+                    <li>Indicator dots</li>
+                    <li>Pause on hover</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-shopping-cart"></i> Enhanced Cart</h3>
+                <ul class="feature-list">
+                    <li>Promo code system</li>
+                    <li>Detailed price breakdown</li>
+                    <li>Quantity management</li>
+                    <li>Shipping calculation</li>
+                    <li>Tax calculation (18% GST)</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-bell"></i> Toast Notifications</h3>
+                <ul class="feature-list">
+                    <li>Success messages</li>
+                    <li>Error notifications</li>
+                    <li>Warning alerts</li>
+                    <li>Info messages</li>
+                    <li>Auto-dismiss timer</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-envelope"></i> Newsletter System</h3>
+                <ul class="feature-list">
+                    <li>Email validation</li>
+                    <li>Duplicate prevention</li>
+                    <li>Success feedback</li>
+                    <li>Local storage tracking</li>
+                    <li>Responsive design</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-mobile-alt"></i> Mobile Experience</h3>
+                <ul class="feature-list">
+                    <li>Touch-friendly interface</li>
+                    <li>Swipe gestures</li>
+                    <li>Responsive navigation</li>
+                    <li>Optimized modals</li>
+                    <li>Fast loading</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><i class="fas fa-cog"></i> Performance Features</h3>
+                <ul class="feature-list">
+                    <li>Lazy loading</li>
+                    <li>Debounced search</li>
+                    <li>Local storage caching</li>
+                    <li>Smooth animations</li>
+                    <li>Optimized images</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Keyboard Shortcuts -->
+        <div class="keyboard-shortcuts">
+            <h2><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h2>
+            <div class="shortcuts-grid">
+                <div class="shortcut">
+                    <span>Focus Search</span>
+                    <span class="key-combo">Ctrl + K</span>
+                </div>
+                <div class="shortcut">
+                    <span>Close Modals</span>
+                    <span class="key-combo">Escape</span>
+                </div>
+                <div class="shortcut">
+                    <span>Navigate Hero</span>
+                    <span class="key-combo">← → Arrows</span>
+                </div>
+                <div class="shortcut">
+                    <span>Back to Top</span>
+                    <span class="key-combo">Click Button</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Test -->
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+            <h2 style="color: #333; margin-bottom: 1rem;"><i class="fas fa-play-circle"></i> How to Test Features</h2>
+            <ol style="line-height: 1.8; color: #666;">
+                <li><strong>Search:</strong> Use the search bar to find products by name, brand, or category</li>
+                <li><strong>Filters:</strong> Use the sidebar filters to narrow down products by price, brand, size</li>
+                <li><strong>Wishlist:</strong> Click the heart icon on any product to add to wishlist</li>
+                <li><strong>Quick View:</strong> Hover over products and click the eye icon for quick preview</li>
+                <li><strong>Cart:</strong> Add items and test promo codes like "OUTFITO20" for 20% off</li>
+                <li><strong>Views:</strong> Toggle between grid and list view using the top controls</li>
+                <li><strong>Sort:</strong> Use the sort dropdown to organize products</li>
+                <li><strong>Newsletter:</strong> Try subscribing with any email address</li>
+                <li><strong>Hero Slider:</strong> Watch auto-rotation or click navigation arrows</li>
+                <li><strong>Mobile:</strong> Try on mobile device for touch gestures and responsive design</li>
+            </ol>
+        </div>
+
+        <!-- Technical Features -->
+        <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+            <h2><i class="fas fa-code"></i> Technical Highlights</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div>
+                    <h4>🎨 Modern CSS</h4>
+                    <p>Grid, Flexbox, animations, custom properties</p>
+                </div>
+                <div>
+                    <h4>⚡ Performance</h4>
+                    <p>Optimized animations, debounced inputs, efficient DOM updates</p>
+                </div>
+                <div>
+                    <h4>📱 Responsive</h4>
+                    <p>Mobile-first design, touch support, adaptive layouts</p>
+                </div>
+                <div>
+                    <h4>🧠 Smart Logic</h4>
+                    <p>Local storage, state management, error handling</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem;">
+            <h2 style="color: #e74c3c; margin-bottom: 1rem;">Ready to Explore? 🚀</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Head back to the main store and try out all these amazing features!</p>
+            <a href="index.html" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1rem; text-decoration: none; display: inline-block;">
+                <i class="fas fa-store"></i> Go to OUTFITO Store
+            </a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Simple back to top functionality for demo page
+        window.addEventListener('scroll', () => {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
