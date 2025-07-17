@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - OUTFITO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>OUTFITO</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Show by Category <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="filterCategory('men')">Men's Wear</a></li>
+                            <li><a href="#" onclick="filterCategory('women')">Women's Wear</a></li>
+                            <li><a href="#" onclick="filterCategory('kids')">Kids Wear</a></li>
+                            <li><a href="#" onclick="filterCategory('accessories')">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span id="breadcrumb-category">Products</span> > <span id="breadcrumb-product">Product Details</span>
+            </div>
+            
+            <div class="product-detail">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnail-images">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-title"></h1>
+                    <p class="brand" id="product-brand"></p>
+                    <div class="price">
+                        <span class="current-price" id="product-price">₹0</span>
+                        <span class="original-price" id="original-price">₹0</span>
+                        <span class="discount" id="discount-percentage"></span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p id="product-description"></p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="color-selection">
+                            <h3>Color</h3>
+                            <div class="color-options" id="color-options">
+                                <!-- Color options will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="size-selection">
+                            <h3>Size</h3>
+                            <div class="size-options" id="size-options">
+                                <!-- Size options will be loaded here -->
+                            </div>
+                        </div>
+                        
+                        <div class="quantity-selection">
+                            <h3>Quantity</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity()">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button onclick="increaseQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-secondary" onclick="addToCart()" id="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-primary" onclick="buyNow()" id="buy-now-btn">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-truck"></i>
+                            <span>Free Delivery</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-undo"></i>
+                            <span>30 Days Return</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>Related Products</h2>
+                <div class="products-grid" id="related-products-grid">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close" onclick="closeCart()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>Total: ₹<span id="cart-total">0</span></h3>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" onclick="closeCart()">Continue Shopping</button>
+                    <button class="btn btn-primary" onclick="proceedToCheckout()" id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OUTFITO</h3>
+                    <p>Your premier destination for fashion and style.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 OUTFITO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
